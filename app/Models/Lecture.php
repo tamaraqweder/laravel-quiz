@@ -7,4 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Lecture extends Model
 {
     use HasFactory;
+
+    public function course(){
+        return $this->belongsTo(Course::class);
+    }
 }
