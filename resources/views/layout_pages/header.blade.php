@@ -94,9 +94,18 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
-    </div>
+ <div class="navbar-nav">
+  <div class="nav-item text-nowrap">
+
+    <form action="{{ route('logout') }}" method="POST">
+      @csrf
+
+      <button type="submit"
+              class="nav-link px-3 bg-transparent border-0">
+        Sign out
+      </button>
+    </form>
+
   </div>
+</div>
 </header>
